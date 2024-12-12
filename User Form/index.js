@@ -1,6 +1,6 @@
 document
   .getElementById("userForm")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", (event) => {
     event.preventDefault();
 
     const name = document.getElementById("name").value;
