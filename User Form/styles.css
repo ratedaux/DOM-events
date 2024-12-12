@@ -1,23 +1,15 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
+h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -33,66 +25,183 @@ li {
   background: #112233;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
 .forms {
   display: flex;
   flex-direction: row;
+  gap: 30px;
+  padding: 20px;
+  margin: 20px;
 }
 
-form {
+.form-content {
+  width: 100%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 400px;
-  padding: 20px;
-  margin: 47px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+  align-items: flex-start;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  font-size: 16px;
+  text-align: left;
 }
 
-input[type="number"] {
+input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1.4px solid #666666;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.formContainer, .userCardContainer {
+  border: 2px solid #112233;
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+}
+
+.formContainer {
+  background-color: #f9f9f9;
+}
+
+.userCardContainer {
+  background-color: #f9f9f9;
+}
+
+.formContainer:hover, .userCardContainer:hover {
+  border-color: #0000FF;
+}
+
+form#userForm {
+  width: 590px;
+  max-width: 400px;
+  background: #f9f9f9;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  border: 2px dashed transparent;
+  border-radius: 2px;
+}
+
+form#userForm:hover {
+  border-color: #0000FF;
+  border-style: dashed;
+}
+
+.form-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
   box-sizing: border-box;
 }
 
-button {
+.form-footer button {
   width: 100%;
+  max-width: 590px;
   padding: 10px;
-  margin-top: 30px;
   background: #1F27F5;
   color: white;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid transparent;
+  border-radius: 2px;
   font-size: 16px;
   cursor: pointer;
-}
-
-button:hover {
-  background: #261278;
-}
-
-#gender {
-  width: 190px;
-  height: 35px;
-}
-
-.result {
   margin-top: 20px;
-  font-size: 18px;
-  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.form-footer button:hover {
+  background: #261278;
+  border-color: #0000FF;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#userCard {
+  width: 350px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #112233;
+  border-radius: 2px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#userCard:hover {
+  border-color: #1F27F5;
+}
+
+#userCard .field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px dashed transparent;
+  border-radius: 4px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#userCard .field:hover {
+  border-color: #1F27F5;
+}
+
+#userCard p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+#userCard span {
+  font-size: 16px;
+}
+
+.userCardContainer {
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #112233;
+  border-radius: 4px;
+  background-color: #112233;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+#userCard {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #112233;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.userCardContainer:hover {
+  border-color: transparent;
+}
+
+.hidden {
+  display: none !important;
 }
