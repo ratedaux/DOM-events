@@ -13,7 +13,7 @@ document.getElementById("userForm").addEventListener("submit", (event) => {
     return;
   }
 
-  // Заполнение данных в карточке
+  // Заполнение данных в карточке пользователя
   document.getElementById("cardName").textContent = name;
   document.getElementById("cardSurname").textContent = surname;
   document.getElementById("cardAge").textContent = age;
