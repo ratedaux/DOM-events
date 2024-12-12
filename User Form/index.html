@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <script src="index.js" defer></script>
@@ -8,38 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Form</title>
 </head>
-
 <body>
-
     <div id="root">
         <h1>Create Employee</h1>
-        <div class ="forms">
-            <form id="userForm">
-                <label for="name">Name*</label>
-                <input type="text" id="name" name="name" placeholder="Enter employee name" required>
+        <div class="forms">
+            <div class="formContainer">
+                <form id="userForm">
+                    <div class="form-content">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" placeholder="Enter employee name" required>
 
-                <label for="surname">Surname*</label>
-                <input type="text" id="surname" name="surname" placeholder="Enter employee surname" required>
+                        <label for="surname">Surname*</label>
+                        <input type="text" id="surname" name="surname" placeholder="Enter employee surname" required>
 
-                <label for="age">Age*</label>
-                <input type="number" id="age" name="age" placeholder="Enter employee Age" required>
+                        <label for="age">Age*</label>
+                        <input type="number" id="age" name="age" placeholder="Enter employee age" required>
 
-                <label for="job position">Job Position*</label>
-                <input type="text" id="position" name="position" placeholder="Enter employee position" required>
-
-                <button type="submit">Create</button>
-            </form>
-            <form id="subForm">
-                <div id="userCard" class="hidden">
-                    <p>Name: <span id="cardName"></span></p>
-                    <p>Surname: <span id="cardSurname"></span></p>
-                    <p>Age: <span id="cardAge"></span></p>
-                    <p>Job Position: <span id="cardPosition"></span></p>
+                        <label for="job position">Job Position*</label>
+                        <input type="text" id="position" name="position" placeholder="Enter employee position" required>
+                    </div>
+                </form>
+                <div class="form-footer">
+                    <button type="submit" form="userForm">Create</button>
                 </div>
-            </form>
+            </div>
+            <div class="userCardContainer">
+                <div id="userCard" class="hidden">
+                    <div class="field">
+                        <p>Name:</p>
+                        <span id="cardName"></span>
+                    </div>
+                    <div class="field">
+                        <p>Surname:</p>
+                        <span id="cardSurname"></span>
+                    </div>
+                    <div class="field">
+                        <p>Age:</p>
+                        <span id="cardAge"></span>
+                    </div>
+                    <div class="field">
+                        <p>Job Position:</p>
+                        <span id="cardPosition"></span>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <div>
+            <select id="userCheck">
+                <option value="">Select an employee</option>
+            </select>
+        </div>
     </div>
 </body>
-
 </html>
