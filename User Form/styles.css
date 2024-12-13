@@ -1,98 +1,99 @@
-* {
-  box-sizing: border-box;
-}
 
-html,
 body {
-  height: 100%;
   margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
+  font-family: Arial, sans-serif;
+  background-color: #0b1121;
+  color: #ffffff; 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  min-height: 100%;
-  font-size: 20px;
-  background: #112233;
+  height: 100vh;
 }
 
-h1{
-    color: white;
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .forms {
   display: flex;
-  flex-direction: row;
+  gap: 20px; 
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 400px;
-  padding: 20px;
-  margin: 47px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+#userForm {
+  background-color: #ffffff; 
+  color: #000000;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
 }
 
-label {
+#userForm label {
+  font-weight: bold;
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
-input[type="number"] {
+#userForm input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
-button {
+#userForm button {
   width: 100%;
   padding: 10px;
-  margin-top: 30px;
-  background: #1F27F5;
-  color: white;
+  background-color: #0055ff; 
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background: #261278;
+#userForm button:hover {
+  background-color: #003cb3; 
 }
 
-#gender {
-  width: 190px;
-  height: 35px;
+#userCard {
+  background-color: #ffffff; 
+  color: #000000; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 250px;
+  display: none; 
 }
 
-.result {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #333;
+#userCard p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 14px;
 }
+
+#userCard p span {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  color: #000000;
+}
+
+#userCard {
+  text-align: left;
+}
+
+#userCard.hidden {
+  display: none;
+}
+
+#userCard:not(.hidden) {
+  display: block;
+}
+
+
