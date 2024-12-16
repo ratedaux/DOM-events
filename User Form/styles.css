@@ -89,7 +89,7 @@ form#userForm {
 }
 
 form#userForm:hover {
-  border-color: #0000FF;
+  /* border-color: #0000FF; */
   border-style: dashed;
 }
 
